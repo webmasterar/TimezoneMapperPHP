@@ -2,7 +2,7 @@
 
 Given a latitude and a longitude of a location, this program will return the timezone string.
 
-This is the PHP version (5.6+) of the end product of: https://github.com/drtimcooper/LatLongToTimezone
+This is the PHP version of the end product of: https://github.com/drtimcooper/LatLongToTimezone
 
 It is released under the same license (MIT).
 

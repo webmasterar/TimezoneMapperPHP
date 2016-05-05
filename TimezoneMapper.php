@@ -9,35 +9,36 @@ class TimezoneMapper {
 
     public static function latLngToTimezoneString($lat, $lng)
     {
-		static::$poly = array_fill(0, 2697, 0);
-
-        static::initializer1();
-        static::initializer2();
-        static::initializer3();
-        static::initializer4();
-        static::initializer5();
-        static::initializer6();
-        static::initializer7();
-        static::initializer8();
-        static::initializer9();
-        static::initializer10();
-        static::initializer11();
-        static::initializer12();
-        static::initializer13();
-        static::initializer14();
-        static::initializer15();
-        static::initializer16();
-        static::initializer17();
-        static::initializer18();
-        static::initializer19();
-        static::initializer20();
-        static::initializer21();
-        static::initializer22();
-        static::initializer23();
-        static::initializer24();
-        static::initializer25();
-        static::initializer26();
-        static::initializer27();
+		if (empty(static::$poly)) {
+			static::$poly = array_fill(0, 2697, 0);
+			static::initializer1();
+			static::initializer2();
+			static::initializer3();
+			static::initializer4();
+			static::initializer5();
+			static::initializer6();
+			static::initializer7();
+			static::initializer8();
+			static::initializer9();
+			static::initializer10();
+			static::initializer11();
+			static::initializer12();
+			static::initializer13();
+			static::initializer14();
+			static::initializer15();
+			static::initializer16();
+			static::initializer17();
+			static::initializer18();
+			static::initializer19();
+			static::initializer20();
+			static::initializer21();
+			static::initializer22();
+			static::initializer23();
+			static::initializer24();
+			static::initializer25();
+			static::initializer26();
+			static::initializer27();
+		}
 
         return static::$timezoneStrings[static::getTzInt( $lat,  $lng)];
     }
