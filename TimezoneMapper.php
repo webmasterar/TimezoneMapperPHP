@@ -27002,15 +27002,16 @@ class TzPolygon {
 		$n = count($this->pts);
 		$yj = $this->pts[$n-2];
 		$xj = $this->pts[$n-1];
+        $inside = false;
 		for ($i = 0; $i < $n; ) {
 			$yi = $this->pts[$i++];
 			$xi = $this->pts[$i++];
 			if ( (($yi>$testy) != ($yj>$testy)) && ($testx < ($xj-$xi) * ($testy-$yi) / ($yj-$yi) + $xi - 0.0001))
-				return true;
+				$inside = !$inside;
 			$xj = $xi;
 			$yj = $yi;
 		}
-		return false;
+		return $inside;
 	}
 	
 }
